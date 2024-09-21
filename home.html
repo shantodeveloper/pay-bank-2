@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>home paynno</title>
+</head>
+
+<body>
+  <main class="flex justify-center">
+    <div class="mockup-phone border-primary">
+      <div class="camera"></div>
+      <div class="display">
+        <div class="artboard artboard-demo phone-3">
+
+
+          <div class="stats bg-primary text-primary-content">
+            <div class="stat">
+              <div class="stat-title text-white">Account balance</div>
+              <div class="stat-value">$<span id="account-balance">2000</span></div>
+            </div>
+          </div>
+
+          <div class="divider">OR</div>
+
+          <div>
+            <button id="show-add-money-form" class="btn btn-lg">Add Amount</button>
+            <button id="show-cash-out-form" class="btn btn-lg">Cash Out</button>
+            <br><br>
+            <button id="show-transaction-history" class="btn btn-lg ">Transection</button>
+          </div>
+
+          <div class="divider">OR</div>
+
+          <!-- add money form -->
+          <div id="add-money-form" class="card bg-base-100 w-full">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Add Amount</span>
+                </label>
+                <input id="input-add-money" type="text" placeholder="input Amount" class="input input-bordered"
+                  required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <input id="input-pin-number" type="password" placeholder="input Pin " class="input input-bordered"
+                  required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn-add-money" class="btn btn-primary">Add Amount</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- cash out from  -->
+
+          <div id="cash-out-form" class="hidden card bg-base-100 w-full">
+            <form class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Cash OUT</span>
+                </label>
+                <input id="input-cash-out" type="text" placeholder="input Amount" class="input input-bordered"
+                  required />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Pin</span>
+                </label>
+                <input id="input-cash-out-pin" type="password" placeholder="input Pin " class="input input-bordered"
+                  required />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button id="btn-cash-out" class="btn btn-primary">Cash Out</button>
+              </div>
+            </form>
+          </div>
+          <!-- transection-section -->
+          <div id="transaction-section" class="hidden ">
+            <h2 class="text-3xl text-center">Transaction History</h2>
+            <div id="transaction-container" class="space-y-3">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/utilisefunc.js"></script>
+  <script src="js/addmaoney.js"></script>
+  <script src="js/cashout.js"></script>
+  <script src="js/futures.js"></script>
+</body>
+
+</html>
